@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans", sans-serif;
+    cursor: default;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+/* MAIN */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.games-block {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    width: max-content;
+    margin: 0 auto;
+    gap: 25px;
+    padding-top: 25px;
+}
+
+.game-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(30, 30, 30);
+    display: block;
+}
+
+.games-block__game {
+    position: relative;
+}
+
+.game__name, .game__buy, .game__price {
+    position: absolute;
+}
+
+.game__name {
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    background: black;
+    color: white;
+    border-radius: 4px;
+}
+
+.game__buy {
+    bottom: 20px;
+    right: 20px;
+    background: #5dcf06;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.game__price {
+    bottom: 20px;
+    right: 114px;
+    background: rgb(15, 15, 15);
+    color: #5dcf06;
+    padding: 6.5px 20px;
+    border-radius: 8px 0 0 8px;
+}
+
+/* BASKET */
+
+.basket-btn {
+    position: absolute;
+    right: 100%;
+    top: 50px;
+    background-color: #5dcf06;
+    color: white;
+    border-radius: 8px 0 0 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.basket-btn img {
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
+    transition: 1s;
+}
+
+.basket-block {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 400px;
+    right: -400px;
+    top: 0;
+    background: white;
+    z-index: 2;
+    transition: 1s;
+}
+
+.basket-items {
+    width: 100%;
+    height: 90vh;
+    overflow-y: auto;
+    /* z-index: 2; */
+}
+
+.games-block-item__game {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 25px 0;
+}
+
+.game-item-img {
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.game-item-delete {
+    border: none;
+    background: none;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 245);
+    padding: 0 15px;
+}
+
+.game-item-div {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
